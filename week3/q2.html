@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function translate(a){
+            const swed={
+                merry: "god",
+                christmas: "jul",
+                and: "och",
+                happy: "gott",
+                new: "nytt",
+                year: "år"
+            }
+            var strlist=a.split(" ")
+            var final;
+            final=strlist.map(ele=>swed[ele])
+            final=final.join(" ")
+            console.log(final)
+        }
+        translate("merry christmas and happy new year")
+
+        console.log("----------------------------------")
+
+        var color=["blue","black","red","purple"]
+        const suffix=["st","nd","rd","th"]
+
+        for(let i=0;i<color.length;i++){
+            if(i<3)
+                console.log(`My ${i+1}${suffix[i]} choice is ${color[i]}`)
+            else 
+                console.log(`My ${i+1}${suffix[3]} choice is ${color[i]}`)
+        }
+    </script>
+</body>
+</html>

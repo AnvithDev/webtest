@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function vehicle(a,b,c){
+            this.a=a
+            this.b=b
+            this.c=c
+        }
+
+        vehicle.prototype.details=()=>{
+            for(let i in this){
+                console.log(i)
+            }
+        }
+
+        vehicle.prototype.comment=()=>{
+            console.log("Fields:"+this.valueOf())
+            console.log("Comment:"+__proto__)
+        }
+
+        var a = new vehicle("Honda", "2008", "1292871");
+      a.details();
+      a.comment();
+    </script>
+</body>
+</html>

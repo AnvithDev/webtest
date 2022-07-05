@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const mixUp=(a,b)=>{
+            var str1=b.slice(0,2)
+            var str2=a.slice(2)
+            var str3=a.slice(0,2)
+            var str4=b.slice(2)
+            var str11=str1+str2
+            var str22=str3+str4
+
+            console.log(str11+" "+str22);
+        }
+
+        mixUp("mix","pod")
+        mixUp("dog","dinner")
+
+        console.log("-------------------------------")
+
+        const verbing = (a)=>{
+            if(a.length>3 && a.slice(-3)!="ing")
+                console.log(a+"ing")
+            else if(a.slice(-3)==="ing")
+                console.log(a+"ly")
+            else 
+                console.log(a)
+        }
+
+        verbing("swimming")
+        verbing("swim")
+        verbing("go")
+    </script>
+</body>
+</html>
